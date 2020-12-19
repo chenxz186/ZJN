@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>股票期权保证金</title>
+    <style>
+        .h {
+            color: blue;
+        }
+
+        input {
+            width: 250px;
+        }
+    </style>
+    <script type="text/javascript">
+        function pull_option() {
+            var index_price = parseFloat(document.getElementById("index_price").value);
+            var premium = parseFloat(document.getElementById("premium").value);
+            var execution_price = parseFloat(document.getElementById("execution_price").value);
+            var virtual_value = Math.max((index_price - execution_price) * 100, 0);
+            var bond = premium * 100 + Math.max(index_price * 100 * 0.13 - virtual_value, 0.5 * execution_price * 100 * 0.13);
+            document.getElementById('bond').innerHTML = ('<h2  class="h">' + bond + '</h2>');
+        }
+
+        function call_option() {
+            var index_price1 = parseFloat(document.getElementById("index_price1").value);
+            var premium1 = parseFloat(document.getElementById("premium1").value);
+            var execution_price1 = parseFloat(document.getElementById("execution_price1").value);
+            var virtual_value1 = Math.max((execution_price1 - index_price1) * 100, 0);
+            var bond1 = premium1 * 100 + Math.max(index_price1 * 100 * 0.13 - virtual_value1, 0.5 * index_price1 * 100 * 0.13);
+            document.getElementById('bond1').innerHTML = ('<h2  class="h">' + bond1 + '</h2>');
+        }
+    </script>
+</head>
+<body>
+<div align="center">
+    <h1>股指期权保证金</h1>
+    <table style=" text-align:right;" width="400">
+        <tr>
+            <td>权利金：</td>
+            <td><input type="text" id="premium" onblur="pull_option()"/></td>
+        </tr>
+        <tr>
+            <td>执行价：</td>
+            <td><input type="text" id="execution_price" onblur="pull_option()"/></td>
+        </tr>
+        <tr>
+            <td>指数价：</td>
+            <td><input type="text" id="index_price" onblur="pull_option()"/></td>
+        </tr>
+        <tr>
+            <td><h3 class="h">认沽保证金：</h3></td>
+            <td id="bond"></td>
+        </tr>
+    </table>
+    <table>------------------------------------------------------------------------------</table>
+    <table style=" text-align:right;" width="400">
+        <tr>
+            <td>权利金：</td>
+            <td><input type="text" id="premium1" onblur="call_option()"/></td>
+        </tr>
+        <tr>
+            <td>执行价：</td>
+            <td><input type="text" id="execution_price1" onblur="call_option()"/></td>
+        </tr>
+        <tr>
+            <td>指数价：</td>
+            <td><input type="text" id="index_price1" onblur="call_option()"/></td>
+        </tr>
+        <tr>
+            <td><h3 class="h">认购保证金：</h3></td>
+            <td id="bond1"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

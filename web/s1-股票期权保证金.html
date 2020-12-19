@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>股票期权保证金</title>
+    <style>
+        .h {
+            color:blue;
+        }
+        input {
+            width:250px;
+        }
+    </style>
+    <script type="text/javascript">
+        function pull_option() {
+            var stock_price = parseFloat(document.getElementById("stock_price").value);
+            var premium = parseFloat(document.getElementById("premium").value);
+            var execution_price = parseFloat(document.getElementById("execution_price").value);
+            var virtual_value = Math.max(stock_price - execution_price, 0);
+            var bond = (Math.min(premium + Math.max(0.12 * stock_price - virtual_value, 0.07 * execution_price), execution_price)) * 10000;
+            document.getElementById('bond').innerHTML=('<h2  class="h">' + bond + '</h2>');
+            document.getElementById('after_bond').innerHTML=('<h2  class="h">' + 1.2 * bond + '</h2>');
+        }
+        function call_option() {
+            var stock_price1 = parseFloat(document.getElementById("stock_price1").value);
+            var premium1 = parseFloat(document.getElementById("premium1").value);
+            var execution_price1 = parseFloat(document.getElementById("execution_price1").value);
+            var virtual_value1 = Math.max(execution_price1 - stock_price1, 0);
+            var bond1 = (premium1 + Math.max(0.12 * stock_price1 - virtual_value1, 0.07 * stock_price1)) * 10000;
+            document.getElementById('bond1').innerHTML=('<h2  class="h">' + bond1 + '</h2>');
+            document.getElementById('after_bond1').innerHTML=('<h2  class="h">' + 1.2 * bond1 + '</h2>');
+        }
+    </script>
+</head>
+<body>
+    <div align="center">
+        <h1>股票期权保证金</h1>
+        <table style=" text-align:right;" width="400">
+            <tr>
+                <td>权利金：</td>
+                <td><input type="text" id="premium" onblur="pull_option()"/></td>
+            </tr>
+            <tr>
+                <td>执行价：</td>
+                <td><input type="text" id="execution_price" onblur="pull_option()"/></td>
+            </tr>
+            <tr>
+                <td>股票价：</td>
+                <td><input type="text" id="stock_price" onblur="pull_option()"/></td>
+            </tr>
+            <tr>
+                <td><h3 class="h">认沽保证金：</h3></td>
+                <td id="bond"></td>
+            </tr>
+            <tr>
+                <td><h3 class="h">公司加收20%：</h3></td>
+                <td id="after_bond"></td>
+            </tr>
+        </table>
+        <table>------------------------------------------------------------------------------</table>
+        <table style=" text-align:right;" width="400">
+            <tr>
+                <td>权利金：</td>
+                <td><input type="text" id="premium1" onblur="call_option()"/></td>
+            </tr>
+            <tr>
+                <td>执行价：</td>
+                <td><input type="text" id="execution_price1" onblur="call_option()"/></td>
+            </tr>
+            <tr>
+                <td>股票价：</td>
+                <td><input type="text" id="stock_price1" onblur="call_option()"/></td>
+            </tr>
+            <tr>
+                <td><h3 class="h">认购保证金：</h3></td>
+                <td id="bond1"></td>
+            </tr>
+            <tr>
+                <td><h3 class="h">公司加收20%：</h3></td>
+                <td id="after_bond1"></td>
+            </tr>
+        </table>
+        <p align="center">
+            注释："公司加收20%"是指交易所收取的保证金基础上加收20%，例如按交易所收<br>
+            取的算是3000元 保证金，加收20%后是3000 * (1 + 20%) = 3600元
+        </p>
+    </div>
+</body>
+</html>

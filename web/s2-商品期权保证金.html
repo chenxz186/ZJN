@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品期权保证金</title>
+    <style>
+        .h {
+            color:blue;
+        }
+        input {
+            width:250px;
+        }
+    </style>
+    <script type="text/javascript">
+        function extract() {
+            var future_price = parseFloat(document.getElementById("future").value);
+            var option_price = parseFloat(document.getElementById("option").value);
+            var execution_price = parseFloat(document.getElementById("execution_price").value);
+            var trading_unit = parseFloat(document.getElementById("trading_unit").value);
+            var ratio = parseFloat(document.getElementById("ratio").value);
+            var virtual_value = Math.max(future_price - execution_price, 0) * trading_unit;
+            var future_bond = future_price * trading_unit * ratio;
+            var bond1 = option_price * trading_unit + future_bond - 0.5 * virtual_value;
+            var bond2 = option_price * trading_unit + 0.5 * future_bond;
+            var after_tax = Math.max(bond1, bond2);
+            document.getElementById('after_tax').innerHTML=('<h2  class="h">' + after_tax + '</h2>');
+        }
+        function extract1() {
+            var future_price = parseFloat(document.getElementById("future1").value);
+            var option_price = parseFloat(document.getElementById("option1").value);
+            var execution_price = parseFloat(document.getElementById("execution_price1").value);
+            var trading_unit = parseFloat(document.getElementById("trading_unit1").value);
+            var ratio = parseFloat(document.getElementById("ratio1").value);
+            var virtual_value = Math.max(execution_price - future_price, 0) * trading_unit;
+            var future_bond = future_price * trading_unit * ratio;
+            var bond1 = option_price * trading_unit + future_bond - 0.5 * virtual_value;
+            var bond2 = option_price * trading_unit + 0.5 * future_bond;
+            var after_tax = Math.max(bond1, bond2);
+            document.getElementById('after_tax1').innerHTML=('<h2  class="h">' + after_tax + '</h2>');
+        }
+    </script>
+</head>
+<body>
+    <div align="center">
+        <h1>商品期权保证金</h1>
+        <table style=" text-align:right;" width="400">
+            <tr>
+                <td>期货价：</td>
+                <td><input type="text" id="future" onblur="extract()"/></td>
+            </tr>
+            <tr>
+                <td>期权价：</td>
+                <td><input type="text" id="option" onblur="extract()"/></td>
+            </tr>
+            <tr>
+                <td>执行价：</td>
+                <td><input type="text" id="execution_price" onblur="extract()"/></td>
+            </tr>
+            <tr>
+                <td>交易单位：</td>
+                <td><input type="text" id="trading_unit" onblur="extract()"/></td>
+            </tr>
+            <tr>
+                <td>公司保证金率：</td>
+                <td><input type="text" id="ratio" onblur="extract()"/></td>
+            </tr>
+            <tr>
+                <td><h3 class="h">认沽保证金：</h3></td>
+                <td id="after_tax"></td>
+            </tr>
+        </table>
+        <table>------------------------------------------------------------------------------</table>
+        <table style=" text-align:right;" width="400">
+            <tr>
+                <td>期货价：</td>
+                <td><input type="text" id="future1" onblur="extract1()"/></td>
+            </tr>
+            <tr>
+                <td>期权价：</td>
+                <td><input type="text" id="option1" onblur="extract1()"/></td>
+            </tr>
+            <tr>
+                <td>执行价：</td>
+                <td><input type="text" id="execution_price1" onblur="extract1()"/></td>
+            </tr>
+            <tr>
+                <td>交易单位：</td>
+                <td><input type="text" id="trading_unit1" onblur="extract1()"/></td>
+            </tr>
+            <tr>
+                <td>公司保证金率：</td>
+                <td><input type="text" id="ratio1" onblur="extract1()"/></td>
+            </tr>
+            <tr>
+                <td><h3 class="h">认购保证金：</h3></td>
+                <td id="after_tax1"></td>
+            </tr>
+        </table>
+        <p align="center">
+            注释："交易单位"是指1手期货相当多少吨现货，例如铁矿石的交易单位是100吨/手，输入 100 就行；"公司保证金率"是指<br>
+            在交易所收取的保证金率再加收的保证金率，已包含交易所的部分，例如 铁矿石是20%，在此输入 0.2 就行
+        </p>
+    </div>
+</body>
+</html>

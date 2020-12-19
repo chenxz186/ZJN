@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中瑞的计提</title>
+    <style>
+        .h {
+            color:blue;
+        }
+        input {
+            width:250px;
+        }
+    </style>
+    <script type="text/javascript">
+        function extract() {
+            var future_value = parseFloat(document.getElementById("future").value);
+            var option_value = parseFloat(document.getElementById("option").value);
+            // var total_value = future_value + option_value
+            // var pre_tax = (future_value + option_value) * 0.6
+            var after_tax = ((future_value + option_value) * 0.6 * (1 - 0.266)).toFixed(2);
+            // document.getElementById('total').innerHTML=('<h2  class="h">' + total_value + '</h2>');
+            // document.getElementById('pre_tax').innerHTML=('<h2  class="h">' + pre_tax '</h2>');
+            document.getElementById('after_tax').innerHTML=('<h2  class="h">' + after_tax + '</h2>');
+        }
+    </script>
+</head>
+<body>
+    <table align="center" width="400">
+        <caption><h1>高红东佣金计提</h1></caption>
+        <tr>
+            <td>期货留存：</td>
+            <td><input type="text" id="future" onblur="extract()"/></td>
+        </tr>
+        <tr>
+            <td>期权留存：</td>
+            <td><input type="text" id="option" onblur="extract()"/></td>
+        </tr>
+        <!--<tr>-->
+            <!--<td>汇总留存：</td>-->
+            <!--<td id="total"></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>税前提成：</td>-->
+            <!--<td id="pre_tax"></td>-->
+        <!--</tr>-->
+        <tr>
+            <td><h2 class="h">税后提成：</h2></td>
+            <td id="after_tax"></td>
+        </tr>
+    </table>
+    <p align="center">公式：税后提成 = (期货留存 + 期权留存) * 0.6 * (1 - 0.266)</p>
+    <p align="center">注释："留存"是扣除交易所后的费用；"提成"是按"留存" 的60% 计<br>提；包含的税有"营业税及附加"6.6%、以及"个税"暂按固定20%计算</p>
+</body>
+</html>
