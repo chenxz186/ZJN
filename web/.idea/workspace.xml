@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aea7d9f9-4742-4f77-a222-3fea75bc21fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/web.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/s0-股指期权保证金.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/s1-股票期权保证金.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/t0-中瑞的计提.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s2-商品期权保证金.html" beforeDir="false" afterPath="$PROJECT_DIR$/s2-商品期权保证金.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +60,9 @@
       <workItem from="1608334852129" duration="1711000" />
       <workItem from="1608344564876" duration="303000" />
       <workItem from="1608345155493" duration="344000" />
-      <workItem from="1608363280353" duration="10535000" />
+      <workItem from="1608363280353" duration="12095000" />
+      <workItem from="1608376870205" duration="122000" />
+      <workItem from="1608376999077" duration="59000" />
     </task>
     <servers />
   </component>
