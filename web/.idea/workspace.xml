@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aea7d9f9-4742-4f77-a222-3fea75bc21fe" name="Default Changelist" comment="" />
+    <list default="true" id="c4dff35c-5a39-45de-a5a2-e3eff7623cf8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../futures_option/.ipynb_checkpoints/da_lian_commodity_option-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../futures_option/.ipynb_checkpoints/da_lian_commodity_option-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../futures_option/.ipynb_checkpoints/shang_hai_commodity_option-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../futures_option/.ipynb_checkpoints/shang_hai_commodity_option-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../futures_option/.ipynb_checkpoints/zheng_zhou_commodity_option-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../futures_option/.ipynb_checkpoints/zheng_zhou_commodity_option-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../futures_option/da_lian_commodity_option.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../futures_option/da_lian_commodity_option.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../futures_option/shang_hai_commodity_option.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../futures_option/shang_hai_commodity_option.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../futures_option/zheng_zhou_commodity_option.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../futures_option/zheng_zhou_commodity_option.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,10 +19,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1lqqDXn2AsI3e9L6ldwyRj8W9h2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1m67XZL3wxcE5K8WUQzfjy2UuUk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -24,62 +31,24 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
-    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\#py\ZJN\web" />
-    </key>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.s2-商品期权保证金.html">
-    <configuration name="s0-股指期权保证金.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web/s0-股指期权保证金.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="s2-商品期权保证金.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/web/s2-商品期权保证金.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.s2-商品期权保证金.html" />
-        <item itemvalue="JavaScript Debug.s0-股指期权保证金.html" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="aea7d9f9-4742-4f77-a222-3fea75bc21fe" name="Default Changelist" comment="" />
-      <created>1608334850911</created>
+      <changelist id="c4dff35c-5a39-45de-a5a2-e3eff7623cf8" name="Default Changelist" comment="" />
+      <created>1608802226318</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1608334850911</updated>
-      <workItem from="1608334852129" duration="1711000" />
-      <workItem from="1608344564876" duration="303000" />
-      <workItem from="1608345155493" duration="344000" />
-      <workItem from="1608363280353" duration="12095000" />
-      <workItem from="1608376870205" duration="122000" />
-      <workItem from="1608376999077" duration="59000" />
-      <workItem from="1608477689011" duration="323000" />
+      <updated>1608802226318</updated>
+      <workItem from="1608802228404" duration="64000" />
+      <workItem from="1608802301383" duration="121000" />
+      <workItem from="1608802432130" duration="120000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="version" value="2" />
   </component>
 </project>
