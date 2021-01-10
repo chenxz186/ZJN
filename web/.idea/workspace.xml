@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4dff35c-5a39-45de-a5a2-e3eff7623cf8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/s0-股指期权保证金.html" beforeDir="false" afterPath="$PROJECT_DIR$/s0-股指期权保证金.html" afterDir="false" />
-    </list>
+    <list default="true" id="c4dff35c-5a39-45de-a5a2-e3eff7623cf8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +37,7 @@
       <workItem from="1608802301383" duration="121000" />
       <workItem from="1608802432130" duration="120000" />
       <workItem from="1609742059080" duration="529000" />
+      <workItem from="1609910190746" duration="20000" />
     </task>
     <servers />
   </component>
